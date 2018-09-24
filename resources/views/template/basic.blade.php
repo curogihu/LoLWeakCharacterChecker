@@ -27,30 +27,34 @@
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 mx-auto">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                  <p class="card-text">対象サモナーネーム</p>
-                  <input style="width:100%;" type="text" name="champion1">
-                </div>
-                <div class="card-body">
-                  <p class="card-text">対象チャンピオン</p>
-                  <input style="width:100%;" type="text" name="champion1">
-                  <input style="width:100%;" type="text" name="champion2">
-                  <input style="width:100%;" type="text" name="champion3">
-                  <input style="width:100%;" type="text" name="champion4">
-                  <input style="width:100%;" type="text" name="champion5">
-                </div>
-              </div>
+      <form method="POST" action="/register">
+        {{ csrf_field() }}
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 mx-auto">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-body">
+                    <p class="card-text">対象サモナーネーム</p>
+                    <input style="width:100%;" type="text" name="champion1">
+                  </div>
 
-              <input type="submit" name="submit" value="送信">
+                  <div class="card-body">
+                    <p class="card-text">対象チャンピオン</p>
+                    <input style="width:100%;" type="text" name="champion1">
+                    <input style="width:100%;" type="text" name="champion2">
+                    <input style="width:100%;" type="text" name="champion3">
+                    <input style="width:100%;" type="text" name="champion4">
+                    <input style="width:100%;" type="text" name="champion5">
+                  </div>
+                </div>
+
+                <input type="submit" name="submit" value="送信">
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </main>
 
     @yield("footer")
